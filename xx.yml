@@ -3,59 +3,38 @@ allow-lan: false
 mode: Rule
 log-level: silent
 external-controller: 127.0.0.1:60000
-proxy-providers:
-  US:
-    type: http
-    path: ./profiles/proxies/US.yaml
-    url: https://github.com/carlliuxx/link/blob/main/004
-    interval: 3600
-    filter: 'US'
-    health-check:
-      enable: true
-      url: http://www.gstatic.com/generate_204
-      interval: 300
-  JP:
-    type: http
-    path: ./profiles/proxies/JP.yaml
-    url: https://github.com/carlliuxx/link/blob/main/004
-    filter: 'JP'
-    interval: 3600
-    health-check:
-      enable: true
-      url: http://www.gstatic.com/generate_204
-      interval: 300
-  KR:
-    type: http
-    path: ./profiles/proxies/KR.yaml
-    url: https://github.com/carlliuxx/link/blob/main/004
-    interval: 3600
-    filter: 'KR'
-    health-check:
-      enable: true
-      url: http://www.gstatic.com/generate_204
-      interval: 300
-  SG:
-    type: http
-    path: ./profiles/proxies/SG.yaml
-    url: https://github.com/carlliuxx/link/blob/main/004
-    interval: 3600
-    filter: 'SG'
-    health-check:
-      enable: true
-      url: http://www.gstatic.com/generate_204
-      interval: 300
-
+proxies:
+  - {name: US_1, server: 31.184.207.6, port: 443, type: vmess, uuid: ff959de2-3f2c-4f96-ca4d-e6ab156f895d, alterId: 0, cipher: auto, tls: true, network: ws, ws-opts: {path: /ff959de2-3f2c-4f96-ca4d-e6ab156f895d, headers: {Host: eason.easonfan.online}}}
+  - {name: US_2, server: 94.176.183.6, port: 443, type: vmess, uuid: ff959de2-3f2c-4f96-ca4d-e6ab156f895d, alterId: 0, cipher: auto, tls: true, network: ws, ws-opts: {path: /ff959de2-3f2c-4f96-ca4d-e6ab156f895d, headers: {Host: eason.easonfan.online}}}
+  - {name: US_3, server: 82.213.5.50, port: 443, type: vmess, uuid: ff959de2-3f2c-4f96-ca4d-e6ab156f895d, alterId: 0, cipher: auto, tls: true, network: ws, ws-opts: {path: /ff959de2-3f2c-4f96-ca4d-e6ab156f895d, headers: {Host: eason.easonfan.online}}}
+  - {name: JP_amd-1, server: oracle.easonfan.online, port: 443, type: vmess, uuid: 8835295a-736e-4490-ac1f-142282099b87, alterId: 0, cipher: auto, tls: true, network: ws, ws-opts: {path: /8835295a-736e-4490-ac1f-142282099b87, headers: {Host: oracle.easonfan.online}}}
+  - {name: JP_amd-2, server: oracle-2.easonfan.online, port: 443, type: vmess, uuid: c426a2eb-acf5-42b9-b872-2efcdb0284f3, alterId: 0, cipher: auto, tls: true, network: ws, ws-opts: {path: /c426a2eb-acf5-42b9-b872-2efcdb0284f3, headers: {Host: oracle-2.easonfan.online}}}
+  - {name: JP_arm-1, server: dongjingamd1.easonfan.online, port: 443, type: vmess, uuid: 65fe4644-da7c-4c41-bb44-c4ea7a30be22, alterId: 0, cipher: auto, tls: true, network: ws, ws-opts: {path: /65fe4644-da7c-4c41-bb44-c4ea7a30be22, headers: {Host: dongjingamd1.easonfan.online}}}
+  - {name: JP_arm-2, server: dongjingamd2.easonfan.online, port: 443, type: vmess, uuid: f55a5cfa-4426-49d8-c041-27f431d6b6f0, alterId: 0, cipher: auto, tls: true, network: ws, ws-opts: {path: /f55a5cfa-4426-49d8-c041-27f431d6b6f0, headers: {Host: dongjingamd2.easonfan.online}}}
+  - {name: KR_arm-1, server: kr1.easonfan.online, port: 443, type: vmess, uuid: ec0235db-fe72-417c-a1d6-bfe4a2a3ad4a, alterId: 0, cipher: auto, tls: true, network: ws, ws-opts: {path: /ec0235db-fe72-417c-a1d6-bfe4a2a3ad4a, headers: {Host: kr1.easonfan.online}}}
+  - {name: KR_arm-2, server: kr2.easonfan.online, port: 443, type: vmess, uuid: c4340a63-ad88-43e4-8171-f6d57fa12b97, alterId: 0, cipher: auto, tls: true, network: ws, ws-opts: {path: /c4340a63-ad88-43e4-8171-f6d57fa12b97, headers: {Host: kr2.easonfan.online}}}
+  - {name: KR_amd-1, server: iamxx.easonfan.online, port: 443, type: vmess, uuid: 13bd348d-a4d1-46e9-94f9-1e8441e535ad, alterId: 0, cipher: auto, tls: true, network: ws, ws-opts: {path: /13bd348d-a4d1-46e9-94f9-1e8441e535ad, headers: {Host: iamxx.easonfan.online}}}
+  - {name: SG_1, server: sg-1.easonfan.online, port: 443, type: vmess, uuid: 785eed5f-d0e2-4895-b106-46e4f979b822, alterId: 0, cipher: auto, tls: true, network: ws, ws-opts: {path: /785eed5f-d0e2-4895-b106-46e4f979b822, headers: {Host: sg-1.easonfan.online}}}
+  - {name: SG_2, server: sg-2.easonfan.online, port: 443, type: vmess, uuid: 7515e055-6b95-4c56-8092-b50e04c5cb1b, alterId: 0, cipher: auto, tls: true, network: ws, ws-opts: {path: /7515e055-6b95-4c56-8092-b50e04c5cb1b, headers: {Host: sg-2.easonfan.online}}}
 proxy-groups:
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
-    use:
-      - US
-      - JP
-      - KR
-      - SG
+    proxies:
+      - US_1
+      - US_2
+      - US_3
+      - JP_amd-1
+      - JP_amd-2
+      - JP_arm-1
+      - JP_arm-2
+      - KR_arm-1
+      - KR_arm-2
+      - KR_amd-1
+      - SG_1
+      - SG_2
   - name: 🚀 节点选择
     type: select
     proxies:
@@ -70,32 +49,56 @@ proxy-groups:
       - DIRECT
   - name: 🚀 手动切换
     type: select
-    use:
-      - US
-      - JP
-      - KR
-      - SG
+    proxies:
+      - US_1
+      - US_2
+      - US_3
+      - JP_amd-1
+      - JP_amd-2
+      - JP_arm-1
+      - JP_arm-2
+      - KR_arm-1
+      - KR_arm-2
+      - KR_amd-1
+      - SG_1
+      - SG_2
   - name: 🔯 故障转移
     type: fallback
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
-    use:
-      - US
-      - JP
-      - KR
-      - SG
+    proxies:
+      - US_1
+      - US_2
+      - US_3
+      - JP_amd-1
+      - JP_amd-2
+      - JP_arm-1
+      - JP_arm-2
+      - KR_arm-1
+      - KR_arm-2
+      - KR_amd-1
+      - SG_1
+      - SG_2
   - name: 🔮 负载均衡
     type: load-balance
     strategy: consistent-hashing
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
-    use:
-      - US
-      - JP
-      - KR
-      - SG
+    proxies:
+      - US_1
+      - US_2
+      - US_3
+      - JP_amd-1
+      - JP_amd-2
+      - JP_arm-1
+      - JP_arm-2
+      - KR_arm-1
+      - KR_arm-2
+      - KR_amd-1
+      - SG_1
+      - SG_2
   - name: 📲 电报消息
     type: select
     proxies:
@@ -177,29 +180,37 @@ proxy-groups:
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
-    use:
-      - JP
+    proxies:
+      - JP_amd-1
+      - JP_amd-2
+      - JP_arm-1
+      - JP_arm-2
   - name: 🇺🇲 美国节点
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 150
-    use:
-      - US
+    proxies:
+      - US_1
+      - US_2
+      - US_3
   - name: 🇸🇬 狮城节点
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
-    use:
-      - SG
+    proxies:
+      - SG_1
+      - SG_2
   - name: 🇰🇷 韩国节点
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
-    use:
-      - KR
+    proxies:
+      - KR_arm-1
+      - KR_arm-2
+      - KR_amd-1
   - name: 🎥 奈飞节点
     type: select
     proxies:
