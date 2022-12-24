@@ -7,7 +7,7 @@ proxy-providers:
   US:
     type: http
     path: ./profiles/proxies/US.yaml
-    url: https://api.dler.io/sub?target=clash&new_name=true&url=https%3A%2F%2Fraw.githubusercontent.com%2Fcarlliuxx%2Flink%2Fmain%2F004&insert=false&config=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2FSleepyHeeead%2Fsubconverter-config%40master%2Fremote-config%2Fspecial%2Fbasic.ini
+    url: https://github.com/carlliuxx/link/blob/main/004
     interval: 3600
     filter: 'US'
     health-check:
@@ -17,7 +17,7 @@ proxy-providers:
   JP:
     type: http
     path: ./profiles/proxies/JP.yaml
-    url: https://api.dler.io/sub?target=clash&new_name=true&url=https%3A%2F%2Fraw.githubusercontent.com%2Fcarlliuxx%2Flink%2Fmain%2F004&insert=false&config=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2FSleepyHeeead%2Fsubconverter-config%40master%2Fremote-config%2Fspecial%2Fbasic.ini
+    url: https://github.com/carlliuxx/link/blob/main/004
     filter: 'JP'
     interval: 3600
     health-check:
@@ -27,7 +27,7 @@ proxy-providers:
   KR:
     type: http
     path: ./profiles/proxies/KR.yaml
-    url: https://api.dler.io/sub?target=clash&new_name=true&url=https%3A%2F%2Fraw.githubusercontent.com%2Fcarlliuxx%2Flink%2Fmain%2F004&insert=false&config=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2FSleepyHeeead%2Fsubconverter-config%40master%2Fremote-config%2Fspecial%2Fbasic.ini
+    url: https://github.com/carlliuxx/link/blob/main/004
     interval: 3600
     filter: 'KR'
     health-check:
@@ -37,7 +37,7 @@ proxy-providers:
   SG:
     type: http
     path: ./profiles/proxies/SG.yaml
-    url: https://api.dler.io/sub?target=clash&new_name=true&url=https%3A%2F%2Fraw.githubusercontent.com%2Fcarlliuxx%2Flink%2Fmain%2F004&insert=false&config=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2FSleepyHeeead%2Fsubconverter-config%40master%2Fremote-config%2Fspecial%2Fbasic.ini
+    url: https://github.com/carlliuxx/link/blob/main/004
     interval: 3600
     filter: 'SG'
     health-check:
